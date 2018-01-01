@@ -1,5 +1,5 @@
 <div class="container">
-  <a class="btn btn-success" href="/players/new">Create Player Account </a>
-  <a class="btn btn-info" href="/players">List all players</a>
-  <%= IO.inspect("Hello World") %>
+  <%= link("Create Player Account"), to: "/players/new", class: "btn btn-success" \
+) %>
+  <%= link("List all players", to: "/players", class: "btn btn-info") %>
 </div>
