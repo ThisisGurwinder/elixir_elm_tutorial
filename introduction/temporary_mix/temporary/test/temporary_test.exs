@@ -7,8 +7,8 @@ defmodule TemporaryTest do
   end
 
   test "the add function takes two integers and add them together" do
-   result = Temporary.add(1, 1)
-   assert result == 2
-   assert is_number(result)
+   Temporary.add(1, 1)
+   |> result == 2
+   |> assert
   end
 end
