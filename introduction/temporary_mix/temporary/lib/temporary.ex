@@ -1,18 +1,8 @@
 defmodule Temporary do
-  @moduledoc """
-  Documentation for Temporary.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Temporary.hello
-      :world
-
-  """
   def hello do
     :world
+  end
+  def add(x, y) do
+    x+y
   end
 end
