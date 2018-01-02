@@ -6,7 +6,7 @@ defmodule PlatformWeb.PlayerApiView do
 		%{data: render_many(players, PlayerApiView, "player.json")}
 	end
 
-	def render("show.json", %{player: player}}) do
+	def render("show.json", %{player: player}) do
 		%{data: render_one(player, PlayerApiView, "player.json")}
 	end
 
