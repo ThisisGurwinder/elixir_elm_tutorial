@@ -14,10 +14,10 @@ model : List String
 model =
       [ "Platform Game",
        "Adventure Game"
-      ]
+      ] 
 
 gamesIndex : List String -> Html msg
-gamesIndex = ul [ class "games-list" ] [ gamesList gameTitles ]
+gamesIndex gameTitles = ul [ class "games-list" ] [ gamesList gameTitles ]
 
 gamesList : List String -> Html msg
 gamesList gameTitles = ul [ class "games-list" ] (List.map gamesListItem gameTitles)
