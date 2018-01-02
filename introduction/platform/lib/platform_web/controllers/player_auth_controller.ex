@@ -16,7 +16,7 @@ defmodule PlatformWeb.PlayerAuthController do
 	def signin(conn, player) do
 		conn
 		|> assign(:current_user, player)
-		|> put_session(:player_id, player_id)
+		|> put_session(:player_id, player.id)
 		|> configure_session(renew: true)
 	end
 end
