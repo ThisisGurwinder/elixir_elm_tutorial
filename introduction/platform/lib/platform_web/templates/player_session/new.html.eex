@@ -1,6 +1,6 @@
 <h2> Player Sign In </h2>
 
-<%= form_for @conn, player_session_path(@conn, :create), [as: session], fn f -> %>
+<%= form_for @conn, player_session_path(@conn, :create), [as: :session], fn f -> %>
 	<div class="form-group">
 		<%= label f, :username, "Player Username", class: "control-label" %>
 		<%= text_input f, :username, placeholder: "Enter Username ...", class: "form-control" %>
