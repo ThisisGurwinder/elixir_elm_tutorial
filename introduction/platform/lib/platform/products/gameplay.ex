@@ -1,7 +1,6 @@
 defmodule Platform.Products.GamePlay do
 	use Ecto.Schema
 	import Ecto.Changeset
-	import Ecto.Query
 	alias Platform.Products.GamePlay
 	alias Platform.Products.Game
 	alias Platform.Accounts.Player
@@ -11,6 +10,8 @@ defmodule Platform.Products.GamePlay do
 		belongs_to :player, Player
 
 		field :player_score, :integer, default: 0
+
+		timestamps()
 	end
 
 	@doc false
