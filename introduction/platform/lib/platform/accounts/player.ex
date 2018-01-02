@@ -9,7 +9,7 @@ defmodule Platform.Accounts.Player do
     field :password_digest, :string
     field :score, :integer, default: 0
     field :username, :string, unique: true
-    
+     
     timestamps()
   end
 
