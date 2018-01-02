@@ -16,7 +16,7 @@ defmodule PlatformWeb.PlayerSessionController do
 				|> put_flash(:error, "Invalid username/password confirmation")
 				|> render("new.html")
 		end
-	end`
+	end
 
 	def delete(conn, _) do
 		conn
