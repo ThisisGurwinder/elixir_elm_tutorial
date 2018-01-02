@@ -9,7 +9,7 @@
 
 	<div class="form-group">
 		<%= label f, :password, "Player Password", class: "control-label" %>
-		<%= password_input f, :password, "Enter Password ...", class: "form-control" %>
+		<%= password_input f, :password, placeholder: "Enter Password ...", class: "form-control" %>
 		<%= error_tag f, :password %>
 	</div>
 
