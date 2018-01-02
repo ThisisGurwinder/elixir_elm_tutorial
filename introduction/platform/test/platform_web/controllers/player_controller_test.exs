@@ -15,7 +15,7 @@ defmodule PlatformWeb.PlayerControllerTest do
   describe "index" do
     test "lists all players", %{conn: conn} do
       conn = get conn, player_path(conn, :index)
-      assert html_response(conn, 200) =~ "Listing Players"
+      asser t html_response(conn, 200) =~ "Listing Players"
     end
   end
 
