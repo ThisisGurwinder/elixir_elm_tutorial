@@ -1,4 +1,4 @@
-def Platform.Accounts.Player do
+defmodule Platform.Accounts.Player do
   use Ecto.Schema
   import Ecto.Changeset
   alias Playform.Accounts.Player
