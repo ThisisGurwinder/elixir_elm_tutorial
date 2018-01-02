@@ -23,4 +23,4 @@ gamesList : List String -> Html msg
 gamesList gameTitles = ul [ class "games-list" ] (List.map gamesListItem gameTitles)
 
 gamesListItem : String -> Html msg
-gamesListItem gamesListItem = li [] [ text gameTitle ]
+gamesListItem gameTitle = li [] [ text gameTitle ]
