@@ -1,7 +1,6 @@
 defmodule PlatformWeb.PlayerController do
   use PlatformWeb, :controller
-  use Phoenix.Controller
-  
+
   alias Platform.Accounts
   alias Platform.Accounts.Player
 
@@ -19,7 +18,7 @@ defmodule PlatformWeb.PlayerController do
     case Accounts.create_player(player_params) do
       {:ok, player} ->
         conn
-        |> PlatformWeb.
+        |> PlatformWeb.PlayerAuthController.sign_in(player)
         |> put_flash(:info, "Player created successfully.")
         |> redirect(to: player_path(conn, :show, player))
       {:error, %Ecto.Changeset{} = changeset} ->
