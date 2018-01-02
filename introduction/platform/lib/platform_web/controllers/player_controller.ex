@@ -1,6 +1,7 @@
 defmodule PlatformWeb.PlayerController do
   use PlatformWeb, :controller
-
+  use Phoenix.Controller
+  
   alias Platform.Accounts
   alias Platform.Accounts.Player
 
