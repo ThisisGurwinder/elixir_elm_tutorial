@@ -16,11 +16,11 @@ defmodule PlatformWeb.PlayerSessionController do
 				|> put_flash(:error, "Invalid username/password confirmation")
 				|> render("new.html")
 		end
-	end
+	end`
 
 	def delete(conn, _) do
 		conn
 		|> PlatformWeb.PlayerAuthController.sign_out()
-		|> redirect(to: player_session_path(conn, :new))
+		|> redirect(to: player_session_path(conn, :create))
 	end
 end 
