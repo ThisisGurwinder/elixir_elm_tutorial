@@ -6,15 +6,15 @@ import Html.Attributes exposing (..)
 main : Html msg
 main =
   div []
-  	[ h1 [] [ text "Games"]
-  	, gamesIndex model
-  	]
+		[ h1 [] [ text "Games"]
+		, gamesIndex model
+		]
 
 model : List String
 model =
 	[ "Platform Game",
 	"Adventure Game"
-]
+	]
 
 gamesIndex : Html msg
 gamesIndex =
