@@ -14,7 +14,7 @@ defmodule PlatformWeb.PlayerSessionController do
 				conn
 				|> put_flash(:info, "welcome back")
 				|> redirect(to: page_path(conn, :index))
-			{:error, _reason, conn} ->g
+			{:error, _reason, conn} ->
 				conn
 				|> put_flash(:error, "Invalid username/password confirmation")
 				|> render("new.html")
