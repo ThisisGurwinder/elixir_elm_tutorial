@@ -43,10 +43,10 @@ exports.config = {
   },
 
   // Configure your plugins
-  plugins: {
+  plugins: {g
     babel: { ignore: [/vendor/] },
     elmBrunch: {
-      mainModules: ["elm-stuff/Main.elm"],
+      mainModules: ["../elm/Main.elm"],
       makeParameters: ["--debug"],
       outputFolder: "../assets/js"
     }
