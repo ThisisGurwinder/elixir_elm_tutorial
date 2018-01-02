@@ -21,6 +21,6 @@ defmodule PlatformWeb.PlayerSessionController do
 	def delete(conn, _) do
 		conn
 		|> PlatformWeb.PlayerAuthController.sign_out()
-		# |> redirect(to: player_session_path(conn, :new))
+		|> redirect(to: player_session_path(conn, :new))
 	end
 end 
