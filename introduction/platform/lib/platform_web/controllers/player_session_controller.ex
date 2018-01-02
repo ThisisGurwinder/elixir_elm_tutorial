@@ -11,7 +11,7 @@ defmodule PlatformWeb.PlayerSessionController do
 				conn
 				|> put_flash(:info, "welcome back")
 				|> redirect(to: page_path(conn, :index))
-			%{"_csrf_token" => _csrf_token, "_method" => "delete", "session_id" => session_id}} ->
+			%{"_csrf_token" => _csrf_token, "_method" => "delete", "session_id" => session_id} ->
 				delete(conn, session_id)
 			{:error, _reason, conn} ->
 				conn
