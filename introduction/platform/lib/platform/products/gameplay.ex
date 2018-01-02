@@ -1,6 +1,7 @@
 defmodule Platform.Products.GamePlay do
 	use Ecto.Schema
 	import Ecto.Changeset
+	import Ecto.Query
 	alias Platform.Products.GamePlay
 	alias Platform.Products.Game
 	alias Platform.Accounts.Player
