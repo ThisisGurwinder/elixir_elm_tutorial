@@ -1,4 +1,6 @@
-module Hello exposing (..)
-import Html
+module App exposing (..)
 
-main = Html.text "Hello World"
+import Html exposing (text)
+
+main =
+  text "Hello from Elm!"
