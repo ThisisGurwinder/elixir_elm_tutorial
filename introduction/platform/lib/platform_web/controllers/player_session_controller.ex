@@ -4,7 +4,7 @@ defmodule PlatformWeb.PlayerSessionController do
 	def new(conn, _) do
 		render conn, "new.html"
 	end
-
+ 
 	def create(conn, %{"session" => %{"username" => username, "password" => password }}) do
 		case PlatformWeb.PlayerAuthController.sign_in_with_username_and_password(conn, username, password, repo: Platform.Repo) do
 			{:ok, conn} ->
@@ -21,6 +21,6 @@ defmodule PlatformWeb.PlayerSessionController do
 	def delete(conn, _) do
 		conn
 		|> PlatformWeb.PlayerAuthController.sign_out()
-		|> redirect(to: player_path(conn, :new))
+		|> redirect(to: player_session_path(conn, :new))
 	end
 end 

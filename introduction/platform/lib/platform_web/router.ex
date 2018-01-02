@@ -18,11 +18,9 @@ defmodule PlatformWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController,  :index
-    # get "/", PlayerController, :new
     resources "/players", PlayerController
-    resources "/sessions", PlayerSessionController
-
-    post "/players", PlayerController
+    resources "/sessions", PlayerSessionController, only: [:new, :create, :delete]
+    resources "/sessions/:session_id", PlayerSessionController
   end
 
   # Other scopes may use custom stacks.
