@@ -12,7 +12,7 @@ defmodule PlatformWeb.PlayerApiView do
 
 	def render("player.json", %{player_api: player_api}) do
 		%{id: player_api.id,
-			username: player_api.username
+			username: player_api.username,
 			display_name: player_api.display_name,
 			score: player_api.score
 	}
