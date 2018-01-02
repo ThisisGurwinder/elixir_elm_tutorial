@@ -3,7 +3,7 @@ defmodule PlatformWeb.PlayerControllerTest do
 
   alias Platform.Accounts
 
-  @valid_attrs %{password: "some password", username: "some username"}
+  @create_attrs %{password: "some password", username: "some username"}
   @update_attrs %{display_name: "some updated display name", password: "some updated password", score: 43, username: "some updated username"}
   @invalid_attrs %{password: nil, username: nil}
 
