@@ -21,6 +21,8 @@ defmodule PlatformWeb.Router do
     # get "/", PlayerController, :new
     resources "/players", PlayerController
     resources "/sessions", PlayerSessionController
+
+    post "/players", PlayerController
   end
 
   # Other scopes may use custom stacks.
