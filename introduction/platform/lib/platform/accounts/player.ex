@@ -2,7 +2,9 @@ defmodule Platform.Accounts.Player do
   use Ecto.Schema
   import Ecto.Changeset
   alias Platform.Accounts.Player
-
+  alias Platform.Products.Game
+  alias Platform.Products.GamePlay
+  
   schema "players" do
     field :display_name, :string
     field :password, :string, virtual: true

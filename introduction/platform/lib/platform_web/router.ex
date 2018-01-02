@@ -23,8 +23,8 @@ defmodule PlatformWeb.Router do
     resources "/sessions/:session_id", PlayerSessionController
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", PlatformWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PlatformWeb do
+    pipe_through: browser
+    resources "/games", GameController, except: [:new, :edit]
+  end
 end
