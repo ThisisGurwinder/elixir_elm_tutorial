@@ -18,7 +18,7 @@
           <ul class="nav nav-pills pull-right">
             <%= if @current_user do %>
               <p class="small"> Signed in as <strong> <%= @current_user.username %> </strong> </p>
-              <%= link "Sign Out", to: player_session_path(@conn, :delete, @current_user), method: "detete", class: "btn btn-sm btn-danger" %>
+              <%= link "Sign Out", to: player_session_path(@conn, :delete, @current_user), method: "delete", class: "btn btn-sm btn-danger" %>
             <% else %>
               <%= link "Signup", to: player_path(@conn, :new), class: "btn btn-sm btn-success" %>
               <%= link "Sign In", to: player_session_path(@conn, :new), class: "btn btn-sm btn-primary" %>
