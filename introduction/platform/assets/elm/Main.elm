@@ -17,10 +17,10 @@ model =
       ]
 
 gamesIndex : List String -> Html msg
-gamesIndex = ul [ class "games-list" ] [ gamesList ]
+gamesIndex = ul [ class "games-list" ] [ gamesList gameTitles ]
 
 gamesList : List String -> Html msg
-gamesList = ul [ class "games-list" ] [ gamesListItem ]
+gamesList gameTitles = ul [ class "games-list" ] (List.map gamesListItem gameTitles)
 
 gamesListItem : String -> Html msg
-gamesListItem = li [] [ text "Platform Game" ]
+gamesListItem gamesListItem = li [] [ text gameTitle ]
