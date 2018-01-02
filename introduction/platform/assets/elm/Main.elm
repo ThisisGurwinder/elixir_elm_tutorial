@@ -16,11 +16,11 @@ model =
        "Adventure Game"
       ]
 
-gamesIndex : Html msg
+gamesIndex : List String -> Html msg
 gamesIndex = ul [ class "games-list" ] [ gamesList ]
 
-gamesList : Html msg
+gamesList : List String -> Html msg
 gamesList = ul [ class "games-list" ] [ gamesListItem ]
 
-gamesListItem : Html msg
+gamesListItem : String -> Html msg
 gamesListItem = li [] [ text "Platform Game" ]
