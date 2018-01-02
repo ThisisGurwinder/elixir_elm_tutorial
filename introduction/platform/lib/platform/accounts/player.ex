@@ -14,7 +14,7 @@ def Platform.Accounts.Player do
   end
 
   @doc false
-  def changeset(end%Player{} = player, attrs) do
+  def changeset(%Player{} = player, attrs) do
     player
     |> cast(attrs, [:display_name, :password, :score, :username ])
     |> validate_required([:username])
