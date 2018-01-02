@@ -4,16 +4,17 @@ defmodule PlatformWeb.PlayerSessionController do
 	def new(conn, _) do
 		render conn, "new.html"
 	end
- 
+ 	
+ 	def create(conn, %{"_csrf_token" => _csrf_token, "_method" => "delete", "session_id" => session_id}) do
+ 		delete(conn, session_id)
+ 	end
 	def create(conn, %{"session" => %{"username" => username, "password" => password }}) do
 		case PlatformWeb.PlayerAuthController.sign_in_with_username_and_password(conn, username, password, repo: Platform.Repo) do
 			{:ok, conn} ->
 				conn
 				|> put_flash(:info, "welcome back")
 				|> redirect(to: page_path(conn, :index))
-			%{"_csrf_token" => _csrf_token, "_method" => "delete", "session_id" => session_id} ->
-				delete(conn, session_id)
-			{:error, _reason, conn} ->
+			{:error, _reason, conn} ->g
 				conn
 				|> put_flash(:error, "Invalid username/password confirmation")
 				|> render("new.html")
