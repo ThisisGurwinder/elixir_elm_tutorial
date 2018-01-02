@@ -1,7 +1,7 @@
 defmodule Platform.Accounts.Player do
   use Ecto.Schema
   import Ecto.Changeset
-  alias Playform.Accounts.Player
+  alias Platform.Accounts.Player
 
   schema "players" do
     field :display_name, :string
